@@ -29,4 +29,9 @@ gem 'devise'
 gem 'public_activity'
 gem 'paperclip'
 gem 'will_paginate'
+gem 'haml-rails', '~> 0.9.0'
+gem "erb2haml", :group => :development
+
+gem 'semantic-ui-sass'
+gem 'font-awesome-sass'
 
