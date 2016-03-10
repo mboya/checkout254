@@ -1,11 +1,14 @@
 source 'https://rubygems.org'
 gem 'rails', '4.2.5.2'
 
-group :development, :test do
-	gem 'sqlite3'
+group :development do
+	gem 'mysql2'
 end
 group :production do
 	gem 'pg'
+end
+group :test do
+	gem 'sqlite3'
 end
 
 gem 'sass-rails', '~> 5.0'
@@ -34,4 +37,6 @@ gem "erb2haml", :group => :development
 
 gem 'semantic-ui-sass'
 gem 'font-awesome-sass'
+
+gem 'pg_search'
 
