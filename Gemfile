@@ -39,4 +39,5 @@ gem 'semantic-ui-sass'
 gem 'font-awesome-sass'
 
 gem 'pg_search'
+gem 'rails_12factor'
 
