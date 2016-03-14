@@ -1,0 +1,19 @@
+/ = @products.product_name
+.ui.container
+	%h3 products
+	.ui.grid
+		-@products.each do |p|
+			.three.wide.column
+				-#=link_to '' do
+					.ui.link.cards
+						.card
+							.image
+							.content
+								.header
+								.meta
+								.description
+							.extra.content
+								%span.right.floated
+								%span
+									%i.cart.icon
+									Add to Cart
