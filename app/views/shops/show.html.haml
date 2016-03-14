@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Shop name:
+  = @shop.shop_name
+%p
+  %b Shop code:
+  = @shop.shop_code
+
+= link_to 'Edit', edit_shop_path(@shop)
+\|
+= link_to 'Back', shops_path

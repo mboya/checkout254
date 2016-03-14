@@ -1,0 +1,30 @@
+
+.ui.menu 
+  .header.item
+    =link_to 'Checkout254', root_path
+  -#=link_to 'Link', '', class: 'active item'
+  -#=link_to 'Link', '', class: 'item'
+  -#.ui.dropdown.item
+    -#DropDown
+    -#%i.dropdown.icon
+    -#.menu
+      -#.item Action
+      -#.item Another Action
+      -#.item Something else here
+      -#.divider
+      -#.item Separated link
+      -#.divider
+      -#.item Another Separated link
+  .right.menu
+    .item
+      .ui.action.left.icon.input
+        %i.search.icon
+        =form_for '' do |f|
+          =f.text_field ''
+          =f.submit 'Submit', class: 'ui green button'
+
+  -if user_signed_in?
+    =link_to 'Log Out', destroy_user_session_path, method: :delete, class: 'item'
+    =link_to 'Setting', edit_user_registration_path, class: 'item'
+  -else
+    =link_to 'Login', new_user_session_path, class: 'item'

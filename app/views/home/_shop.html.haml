@@ -1,0 +1,27 @@
+-if !@shops.nil?
+	.ui.container
+		%h3 Shops
+		.ui.grid
+			-@shops.each do |s|
+				.four.wide.column
+					.ui.link.cards
+						.card
+							.image
+								=image_tag 'molly.png'
+							.content
+								.header
+									=s.shop_name
+								.meta
+								.description
+							.extra.content
+								%span.right.floated
+									Joined 2016
+								%span
+									%i.user.icon
+									75 Counts
+
+-else
+	.ui.container{style: 'margin-top: 15%;'}
+		.ui.red.center.aligned.segment
+			%i.inverse.huge.warning.icon
+			%h4 No Shops Registered at the Moment

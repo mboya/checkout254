@@ -1,0 +1,13 @@
+= form_for @receipt do |f|
+  - if @receipt.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@receipt.errors.count, "error")} prohibited this receipt from being saved:"
+      %ul
+        - @receipt.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :receipt_number
+    = f.number_field :receipt_number
+  .actions
+    = f.submit 'Save'
