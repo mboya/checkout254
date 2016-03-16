@@ -5,7 +5,9 @@
       %ul
         - @product.errors.full_messages.each do |msg|
           %li= msg
-
+  .field
+    =f.label :avatar
+    =f.file_field :avatar
   .field
     = f.label :product_name
     = f.text_field :product_name

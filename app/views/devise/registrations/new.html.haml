@@ -4,6 +4,14 @@
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
       = devise_error_messages!
       .field
+        =f.label :avatar
+        =f.file_field :avatar
+        %br/
+      .field
+        =f.label :names
+        =f.text_field :names
+        %br/
+      .field
         = f.label :email
         %br/
         = f.email_field :email, autofocus: true
